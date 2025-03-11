@@ -2,9 +2,6 @@ import streamlit as st
 
 def main():
     try:
-            
-            
-            
         pag = {
             "Eliga una App" : [
                 st.Page(page='Lib\presentation\screens\Matches.py',title='Matches',url_path='Matches.py'),
