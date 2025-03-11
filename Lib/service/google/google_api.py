@@ -91,7 +91,13 @@ class API_sheets:
         except Exception as e :
             st.error(f"Hubo un error desconocido : {e}")
             st.error(f"Infromar al mario")
-            
+
+#   API_drive
+#   Esta clase se encarga de manejar las peticiones a Google Drive
+#   SCOPES : list : permisos de la API
+#   SERVICE_ACCOUNT_FILE : str : archivo de credenciales
+#   creds : obj : credenciales
+#   drive_service : obj : servicio de drive
 class API_drive:
     def __init__(self):
         self.SCOPES = ['https://www.googleapis.com/auth/drive']
@@ -129,7 +135,8 @@ class API_drive:
         
         except Exception as e:
             st.error(f"Hubo un error desconocido : {e}")
-            st.error(f"Informar a Mario")
+            st.info(f"Informar a Mario")
             
         except FileNotFoundError as token:
             st.error(f"Token no encontrado o autorizado : {token}")
+            st.info(f"Informar a Mario")
